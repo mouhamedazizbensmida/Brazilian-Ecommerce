@@ -94,9 +94,8 @@ if mode == "Classification":
         result = ''
 
         # Predict Customer Satsifaction
-        if st.button('Predict_Satisfaction'):           result=predict_satisfaction(freight_value,product_description_lenght,product_photos_qty,payment_type,payment_installments,payment_value,estimated_days, arrival_days, arrival_status, seller_to_carrier_status, estimated_delivery_rate, arrival_delivery_rate, shipping_delivery_rate)
-            
-                                        
+        if st.button('Predict_Satisfaction'):           
+            result=predict_satisfaction(freight_value,product_description_lenght,product_photos_qty,payment_type,payment_installments,payment_value,estimated_days, arrival_days, arrival_status, seller_to_carrier_status, estimated_delivery_rate, arrival_delivery_rate, shipping_delivery_rate)
         if result == 0:
             result = 'Not Satisfied'
             st.success(f'The Customer is {result}')
